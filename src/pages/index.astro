@@ -1,35 +1,59 @@
 ---
-import DefaultLayout from '../layouts/DefaultLayout.astro'
+import DefaultLayout from "../layouts/DefaultLayout.astro";
 ---
 
 <DefaultLayout title="Home">
   <section class="margin-48">
     <div class="container">
-      <h1>Accessible Astro <em>Starter</em></h1><br>
+      <p>
+        Maggie June Flower Farm is a small regenerative farm outside of
+        Bloomington IN producing custom bouquets and wholesale cut flowers for
+        florists, restaurants, and special events.
+      </p>
+      <p>
+        By centering soil and ecosystem health, regenerative practices build
+        habitat and food for creatures above ground and below. Located within
+        the Common Home intentional community, the farm’s mission is to tend the
+        land respectfully and share its beauty.
+      </p>
     </div>
   </section>
   <section class="padding-48 color-primary">
     <div class="container">
-      <h2 class="margin-16 bottom">Auto Grid</h2>
+      <!-- <h2 class="margin-16 bottom">Auto Grid</h2> -->
     </div>
-    <div class="container" data-auto-grid="3">
-      <div class="text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500" data-animation="fade-in">
-        <h3>Column 1</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem accusantium placeat eius officiis veniam totam. Earum eos et voluptate dolorem. </p>
+    <div class="container text-shadow" data-auto-grid="3">
+      <div
+        class="text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500"
+        data-animation="fade-in"
+      >
+        <h3>Summer Flower Share</h3>
+        <p>Arranged bouquets each week through the summer months</p>
       </div>
-      <div class="text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500" data-animation="fade-in" data-animation-delay="0.25s">
-        <h3>Column 2</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem accusantium placeat eius officiis veniam totam. Earum eos et voluptate dolorem.</p>
+      <div
+        class="wholesale text-shadow text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500"
+        data-animation="fade-in"
+        data-animation-delay="0.25s"
+      >
+        <h3 class="text-shadow-title">Wholesale</h3>
+        <p>
+          Wholesale flowers in bulk for your floral business or large-scale
+          event
+        </p>
       </div>
-      <div class="text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500" data-animation="fade-in" data-animation-delay="0.5s">
-        <h3>Column 3</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem accusantium placeat eius officiis veniam totam. Earum eos et voluptate dolorem.</p>
+      <div
+        class="text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500"
+        data-animation="fade-in"
+        data-animation-delay="0.5s"
+      >
+        <h3>Events + Custom Orders</h3>
+        <p>Custom bouquets and arrangements for events and special occasions</p>
       </div>
     </div>
-    <div class="container margin-16 top">
+    <!-- <div class="container margin-16 top">
       <a href="#" class="button">Tab to me first!</a>&nbsp;
       <a href="#" class="button color-secondary">Then it's my turn</a>
-    </div>
+    </div> -->
   </section>
   <section class="margin-64">
     <div class="container">
@@ -48,10 +72,41 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
         </div>
         <div class="small-12 medium-8 offset-medium-4 space-content">
           <h3>Main</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi mollitia alias sunt accusamus reiciendis fuga delectus, repellendus molestiae dolore illo iusto eligendi eaque qui hic facilis assumenda! Velit, minus, nobis. <strong><a href="#">And lastly tab to me</a></strong>.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi mollitia alias sunt accusamus reiciendis fuga delectus, repellendus molestiae dolore illo iusto eligendi eaque qui hic facilis assumenda! Velit, minus, nobis.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
+            mollitia alias sunt accusamus reiciendis fuga delectus, repellendus
+            molestiae dolore illo iusto eligendi eaque qui hic facilis
+            assumenda! Velit, minus, nobis. <strong
+              ><a href="#">And lastly tab to me</a>
+            </strong>.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi
+            mollitia alias sunt accusamus reiciendis fuga delectus, repellendus
+            molestiae dolore illo iusto eligendi eaque qui hic facilis
+            assumenda! Velit, minus, nobis.
+          </p>
         </div>
       </div>
     </div>
   </section>
 </DefaultLayout>
+
+<style>
+  div.wholesale {
+    background-image: url("../assets/img/beebalm.jpg");
+    background-size: cover;
+    background-position: 60% 50%;
+  }
+  h3 {
+    color: ;
+  }
+  .text-shadow {
+    text-shadow: 1px 1px 5px black, -1px -1px 5px black, 2px 2px 10px black,
+      -2px -2px 10px black;
+  }
+  .text-shadow-title {
+    color: rgb(244, 244, 244);
+    text-shadow: 1px 1px 5px black, -1px -1px 10px black;
+  }
+</style>
