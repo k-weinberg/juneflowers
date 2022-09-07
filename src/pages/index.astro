@@ -3,18 +3,32 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
 ---
 
 <DefaultLayout title="Home">
-  <section class="margin-48">
+  <section class="intro-container overflow-hidden">
     <div class="container">
-      <p>
-        Maggie June Flower Farm is a small regenerative farm outside of
-        Bloomington IN producing bouquets and wholesale cut flowers.
-      </p>
-      <p>
-        By centering soil and ecosystem health, regenerative practices build
-        habitat and food for creatures above ground and below. Located within
-        the Common Home intentional community, the farm’s mission is to tend the
-        land respectfully and share its beauty.
-      </p>
+      <div class="grid">
+        <div class="image-intro m-6 medium-6 large-4">
+          <img
+            class="image-intro max-w-12"
+            src="./src/assets/img/goldenHour.JPG"
+          />
+        </div>
+        <!-- <div></div> -->
+        <div
+          class="intro-text small-12 medium-6 bg-primary-100 p-10 large-8 my-auto mx-auto rounded-md"
+        >
+          <p>
+            June Flora Farm is a small regenerative farm outside of Bloomington
+            IN producing bouquets and wholesale cut flowers.
+          </p>
+          <br />
+          <p>
+            By centering soil and ecosystem health, regenerative practices build
+            habitat and food for creatures above ground and below. Located
+            within the Common Home intentional community, the farm’s mission is
+            to tend the land respectfully and share its beauty.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
   <section class="padding-48 color-primary">
@@ -22,13 +36,16 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
       <!-- <h2 class="margin-16 bottom">Auto Grid</h2> -->
     </div>
     <div class="container text-shadow" data-auto-grid="3">
-      <div
-        class="text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500"
-        data-animation="fade-in"
-      >
-        <h3>Summer Flower Share</h3>
-        <p>Arranged bouquets each week through the summer months</p>
-      </div>
+      <a>
+        <div
+          class="text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500"
+          data-animation="fade-in"
+        >
+          <h3>Summer Flower Share</h3>
+          <p>Arranged bouquets each week through the summer months</p>
+        </div>
+      </a>
+
       <div
         class="wholesale text-shadow text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500"
         data-animation="fade-in"
@@ -40,6 +57,7 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
           event
         </p>
       </div>
+
       <div
         class="text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500"
         data-animation="fade-in"
@@ -107,5 +125,23 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
   .text-shadow-title {
     color: rgb(244, 244, 244);
     text-shadow: 1px 1px 5px black, -1px -1px 10px black;
+  }
+  .intro-container {
+    background-color: #483c32;
+  }
+  .image-intro {
+    border-radius: 10px;
+  }
+  @media only screen and (max-width: 768px) {
+    .image-intro {
+      display: none;
+    }
+    .intro-container {
+      background-image: url("./src/assets/img/goldenHour.JPG");
+      background-size: contain;
+    }
+    .intro-text {
+      margin: 40px 20px 40px 20px;
+    }
   }
 </style>
