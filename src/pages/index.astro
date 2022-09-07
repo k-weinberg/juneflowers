@@ -17,15 +17,13 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
           class="intro-text small-12 medium-6 bg-primary-100 p-10 large-8 my-auto mx-auto rounded-md"
         >
           <p>
-            June Flora Farm is a small regenerative farm outside of Bloomington
-            IN producing bouquets and wholesale cut flowers.
+            June Flora Farm is a small regenerative farm near Bloomington IN
+            producing bouquets and wholesale cut flowers.
           </p>
           <br />
           <p>
             By centering soil and ecosystem health, regenerative practices build
-            habitat and food for creatures above ground and below. Located
-            within the Common Home intentional community, the farm’s mission is
-            to tend the land respectfully and share its beauty.
+            habitat and food for creatures aboveground and below!
           </p>
         </div>
       </div>
@@ -36,36 +34,59 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
       <!-- <h2 class="margin-16 bottom">Auto Grid</h2> -->
     </div>
     <div class="container text-shadow" data-auto-grid="3">
-      <a>
+      <a class="cardlink" href="#">
         <div
-          class="text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500"
+          class="cardbackground text-shadow text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500 custom"
           data-animation="fade-in"
+          data-animation-delay="0.25s"
         >
-          <h3>Summer Flower Share</h3>
-          <p>Arranged bouquets each week through the summer months</p>
+          <div class="frosted p-5 rounded-lg">
+            <h1 class="card-title text-2xl text-shadow-title">
+              <u><strong>Events + Custom Orders</strong></u>
+            </h1>
+            <br />
+            <p class="text-shadow-title">
+              Custom bouquets and arrangements for events and special occasions
+            </p>
+          </div>
+        </div>
+      </a>
+      <a class="cardlink" href="#">
+        <div
+          class="cardbackground text-shadow text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500 wholesale"
+          data-animation="fade-in"
+          data-animation-delay="0.25s"
+        >
+          <div class="frosted p-5 rounded-lg">
+            <h1 class="card-title text-2xl text-shadow-title">
+              <u><strong>Wholesale</strong></u>
+            </h1>
+            <br />
+            <p class="text-shadow-title">
+              Wholesale flowers in bulk for your floral business or large-scale
+              event
+            </p>
+          </div>
         </div>
       </a>
 
-      <div
-        class="wholesale text-shadow text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500"
-        data-animation="fade-in"
-        data-animation-delay="0.25s"
-      >
-        <h3 class="text-shadow-title">Wholesale</h3>
-        <p>
-          Wholesale flowers in bulk for your floral business or large-scale
-          event
-        </p>
-      </div>
-
-      <div
-        class="text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500"
-        data-animation="fade-in"
-        data-animation-delay="0.5s"
-      >
-        <h3>Events + Custom Orders</h3>
-        <p>Custom bouquets and arrangements for events and special occasions</p>
-      </div>
+      <a class="cardlink" href="#">
+        <div
+          class="cardbackground text-shadow text-neutral-100 bg-neutral-900 space-32 radius-large elevation-500 share"
+          data-animation="fade-in"
+          data-animation-delay="0.25s"
+        >
+          <div class="frosted p-5 rounded-lg">
+            <h1 class="card-title text-2xl text-shadow-title">
+              <u><strong> Summer Flower Share</strong></u>
+            </h1>
+            <br />
+            <p class="text-shadow-title">
+              Arranged bouquets each week through the summer months
+            </p>
+          </div>
+        </div>
+      </a>
     </div>
     <!-- <div class="container margin-16 top">
       <a href="#" class="button">Tab to me first!</a>&nbsp;
@@ -110,21 +131,31 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
 </DefaultLayout>
 
 <style>
-  div.wholesale {
-    background-image: url("../assets/img/beebalm.jpg");
+  .card-title {
+    font-family: Uchen;
+  }
+
+  a.cardlink:hover {
+    box-shadow: 0px 0px 40px hsl(27, 18%, 24%);
+  }
+
+  div.cardbackground {
     background-size: cover;
     background-position: 60% 50%;
+    height: 100%;
   }
-  h3 {
-    color: ;
+
+  .wholesale {
+    background-image: url("../assets/img/beebalm.jpg");
   }
-  .text-shadow {
-    text-shadow: 1px 1px 5px black, -1px -1px 5px black, 2px 2px 10px black,
-      -2px -2px 10px black;
+  .custom {
+  }
+  .share {
+    background-image: url("../assets/img/bouquet2.jpg");
   }
   .text-shadow-title {
-    color: rgb(244, 244, 244);
-    text-shadow: 1px 1px 5px black, -1px -1px 10px black;
+    color: white;
+    text-shadow: 1px 1px 20px black, -1px -1px 10px black;
   }
   .intro-container {
     background-color: #483c32;
@@ -143,5 +174,10 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
     .intro-text {
       margin: 40px 20px 40px 20px;
     }
+  }
+
+  .frosted {
+    box-shadow: inset 0 0 2000px rgba(41, 41, 41, 0.8);
+    /* filter: blur(10px); */
   }
 </style>
